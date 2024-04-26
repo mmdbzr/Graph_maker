@@ -14,7 +14,7 @@ import numpy as np
 
 
 
-def edge_creator(dataset , th):
+def edge_creator(dataset , threshold):
 
 
 
@@ -37,7 +37,7 @@ def edge_creator(dataset , th):
     normalized_matrix = (adjacency_matrix - min_dist) / (max_dist - min_dist)
 
 
-    normalized_matrix = (normalized_matrix <= th) * normalized_matrix
+    normalized_matrix = (normalized_matrix <= threshold) * normalized_matrix
 
     return normalized_matrix
 
